@@ -1,0 +1,16 @@
+{
+  "name": "test-app",
+  "version": "0.0.1",
+  "dependencies": {
+    "requirejs": "*"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-requirejs": "*",
+    "grunt-contrib-clean": "~0.5.0"
+  }
+}
