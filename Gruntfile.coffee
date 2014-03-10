@@ -40,6 +40,15 @@ module.exports = (grunt)->
                         return filename.match(/.*\/(.*)\.hogan/)[1]
                 files: 
                     "build/debug/js/templates_base.js":"hogan/**/*.hogan"
+        yuidoc:
+            debug:
+                name: '<%= pkg.name %>',
+                description: '<%= pkg.description %>'
+                version: '<%= pkg.version %>'
+                url: '<%= pkg.homepage %>'
+                options:
+                    paths: 'build/debug/js'
+                    outdir: 'docs'
         watch:
             static:
                 files: ["static/**/*"]
@@ -49,7 +58,7 @@ module.exports = (grunt)->
                 tasks: ["sass:debug"]
             coffee:
                 files: ["coffee/**/*"]
-                tasks: ["coffee:debug"]
+                tasks: ["coffee:debug", "yuidoc:debug"]
             hogan:
                 files: ["hogan/**/*"]
                 tasks: ["hogan:debug"]
@@ -58,6 +67,7 @@ module.exports = (grunt)->
     grunt.loadNpmTasks "grunt-contrib-sass"
     grunt.loadNpmTasks "grunt-contrib-coffee"
     grunt.loadNpmTasks "grunt-contrib-hogan"
+    grunt.loadNpmTasks "grunt-contrib-yuidoc"
 
     #Grunt utilities.
     grunt.loadNpmTasks "grunt-contrib-copy"
@@ -65,5 +75,5 @@ module.exports = (grunt)->
     grunt.loadNpmTasks "grunt-contrib-clean"
 
     grunt.registerTask "debug", ["clean","copy:debug", "sass:debug",
-        "coffee:debug", "hogan:debug"]
+        "coffee:debug", "hogan:debug", "yuidoc:debug"]
     grunt.registerTask "default", "debug"
