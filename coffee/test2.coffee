@@ -1,1 +1,2 @@
-console.log "Goodbye cruel world!"
+define
+    exec: -> console.log "Goodbye cruel world!"
