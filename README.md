@@ -8,6 +8,7 @@ Technologies
 * Logic in coffeescript -- http://coffeescript.org
 * Styling in SASS (using the indented syntax) -- http://sass-lang.com
 * Templating using Hogan (a Mustache implementation) -- http://twitter.github.io/hogan.js/
+* Docs generation by YUIDoc (uses JSDoc syntax) -- http://yui.github.io/yuidoc/ 
 
 Libraries
 ---------
