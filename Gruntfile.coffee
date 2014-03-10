@@ -17,7 +17,7 @@ module.exports = (grunt)->
                     debugInfo: true
                     lineNumbers: true
                 files:
-                    "build/debug/css/page.css":"sass/***.sass"
+                    "build/debug/css/page.css":"sass/page.sass"
         coffee:
             debug:
                 options:
