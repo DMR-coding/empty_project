@@ -17,7 +17,7 @@ module.exports = (grunt)->
                     debugInfo: true
                     lineNumbers: true
                 files:
-                    "build/debug/css/page.css":"sass/***.sass"            
+                    "build/debug/css/page.css":"sass/***.sass"
         coffee:
             debug:
                 options:
@@ -39,19 +39,19 @@ module.exports = (grunt)->
                         #Strip out everything but the bare filename
                         return filename.match(/.*\/(.*)\.hogan/)[1]
                 files: 
-                    "build/debug/js/templates.js":"hogan/***.hogan"
+                    "build/debug/js/templates_base.js":"hogan/**/*.hogan"
         watch:
             static:
-                files: ["static/***"]
+                files: ["static/**/*"]
                 tasks: ["copy:debug"]
             sass:
-                files: ["sass/***"]
+                files: ["sass/**/*"]
                 tasks: ["sass:debug"]
             coffee:
-                files: ["coffee/***"]
+                files: ["coffee/**/*"]
                 tasks: ["coffee:debug"]
             hogan:
-                files: ["hogan/***"]
+                files: ["hogan/**/*"]
                 tasks: ["hogan:debug"]
 
     #Technologies
