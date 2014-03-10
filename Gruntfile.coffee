@@ -17,6 +17,10 @@ module.exports = (grunt)->
                     debugInfo: true
                     lineNumbers: true
                 files:
+                    #Because of how CSS works, the order in which sass files are
+                    #imported is very important. Hence, we only grunt one
+                    #top-level sass file, and let it @import the rest so that
+                    #their order can be strictly determined.
                     "build/debug/css/page.css":"sass/page.sass"
         coffee:
             debug:
